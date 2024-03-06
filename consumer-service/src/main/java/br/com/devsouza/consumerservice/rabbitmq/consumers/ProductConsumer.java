@@ -5,14 +5,15 @@ import org.springframework.stereotype.Component;
 
 import lombok.extern.log4j.Log4j2;
 
+import br.com.devsouza.commons.dtos.ProductDTO;
 import static br.com.devsouza.commons.constants.RabbitMQConstants.*;
 
 @Log4j2
 @Component
-public class StringConsumer {
+public class ProductConsumer {
     
-    @RabbitListener(queues = { QUEUE_PRODUCT_LOG })
-    public void consumer(String message) {
-        log.info("Consumer received a message " + message);
+    @RabbitListener(queues = { RK_PRODUCT_LOG })
+    public void consumer(ProductDTO message) {
+        log.info("Received message " + message.toString());
     }
 }

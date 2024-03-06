@@ -1,7 +1,6 @@
 package br.com.devsouza.producer.services;
 
-import static br.com.devsouza.producer.configs.RabbitMQConfig.EXG_NAME_MARKETPLACE;
-import static br.com.devsouza.producer.configs.RabbitMQConfig.RK_PRODUCT_LOG;
+import static br.com.devsouza.commons.constants.RabbitMQConstants.*;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
